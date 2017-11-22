@@ -1,6 +1,6 @@
-Simple ToDo Application with React.js
+React.js Test Application
 
-Using styled-components and material-ui
+Using styled-components and axios
 
 Manual:
 1. npm i
