@@ -21,7 +21,20 @@ export default class HomePage extends React.Component {
     this.getProductsList();
   }
 
+  checkForEmptyFields = (email, password) => {
+    if (email == '') {
+      alert('Email can not be empty');
+      return false;
+    } else if (password == '') {
+      alert('Password can not be empty');
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   submitRegisterFormHandler = (email, password) => {
+    if(!this.checkForEmptyFields(email, password)) return;
     axios.post('http://smktesting.herokuapp.com/api/register/', {
       username: email,
       password: password
@@ -46,6 +59,7 @@ export default class HomePage extends React.Component {
   }
 
   submitLoginFormHandler = (email, password) => {
+    if(!this.checkForEmptyFields(email, password)) return;
     axios.post('http://smktesting.herokuapp.com/api/login/', {
       username: email,
       password: password

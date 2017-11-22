@@ -56,6 +56,11 @@ export default class Form extends React.Component {
     }
   }
 
+  defaultHandler = (e) => {
+    e.preventDefault();
+    alert("Email and password must be valid");
+  }
+
   render() {
     const { formToShow, submitRegisterFormHandler, submitLoginFormHandler, closeModalHandler } = this.props;
     const { emailValue, emailValid, passwordValue, passwordValid } = this.state;
@@ -84,12 +89,16 @@ export default class Form extends React.Component {
           errorText="Password must be at least 6 characters length..."
         />
         <SubmitButton 
-          onClick={submitRegisterFormHandler.bind(this, emailValue, passwordValue)}
+          onClick={
+            emailValid === true && passwordValid === true ? submitRegisterFormHandler.bind(this, emailValue, passwordValue) : this.defaultHandler
+          }
           visible={formToShow === "register"}
           text="Register"
         />
         <SubmitButton 
-          onClick={submitLoginFormHandler.bind(this, emailValue, passwordValue)}
+          onClick={
+            emailValid === true && passwordValid === true ? submitLoginFormHandler.bind(this, emailValue, passwordValue) : this.defaultHandler
+          }
           visible={formToShow === "login"} 
           text="Login"
         />
