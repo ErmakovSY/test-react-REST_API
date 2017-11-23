@@ -107,6 +107,7 @@ export default class ProductCard extends React.Component {
             isSelectable={true}
             isAggregateRating={false}
             starWidthAndHeight={"15px"}
+            starEmptyColor={"#06266F"}
             changeRating={this.ratingChangeHandler}
             numOfStars={5}
           />  
