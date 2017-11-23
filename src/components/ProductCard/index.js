@@ -32,7 +32,8 @@ export default class ProductCard extends React.Component {
       this.getProductComments(this.props.data.id);
       this.setState({
         id: this.props.data.id,
-        image: this.props.data.img
+        image: this.props.data.img,
+        commentValue: ''
       })
     }, 200)
   }
@@ -87,7 +88,7 @@ export default class ProductCard extends React.Component {
   }
 
   render() {
-    const { id, image, rate, commentList } = this.state;
+    const { id, image, rate, commentList, commentValue } = this.state;
     const { data, token } = this.props;
     return (
       <CardWrapper>
@@ -111,6 +112,7 @@ export default class ProductCard extends React.Component {
           />  
           <CommentField 
             onChange={this.commentChangeHandler}
+            value={commentValue}
           />
           <CommentButton 
             onClick={this.addCommentHandler.bind(this, id)}
