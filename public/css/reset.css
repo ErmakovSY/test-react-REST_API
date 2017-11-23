@@ -38,6 +38,10 @@ ul li {
 	list-style-type: none;
 }
 
+body {
+	background-color: #F9F9F9;
+}
+
 .cbalink {
 	display: none !important;
 }

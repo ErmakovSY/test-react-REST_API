@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const BUTTON_COLOR = '#0C5AA6';
 const BUTTON_COLOR_HOVER = '#04396C';
+const TEXT_COLOR = '#00224E';
 
 export const HeaderWrapper = styled.div`
   height: 50px;
@@ -29,7 +30,7 @@ export const UserName = styled.p`
   line-height: 18px;
   font-size: 14px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   text-align: left;
   margin-right: 5px;
 `;
@@ -145,7 +146,7 @@ export const InputField = styled.input`
   line-height: 20px;
   font-size: 16px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   border: 1px solid #c0af97;
   border-radius: 6px;
   border-color: ${props => props.borderColor};
@@ -193,6 +194,7 @@ export const SectionWrapper = styled.section`
   max-width: 600px;
   padding: 10px;
   margin: 0 auto;
+  background-color: #BAD8FF;
 `;
 
 export const CardWrapper = styled.section`
@@ -206,12 +208,11 @@ export const CardWrapper = styled.section`
 
 export const ImageWrapper = styled.div`
   height: 200px;
-  width: 300px;
   overflow: hidden;
   margin-bottom: 10px;
+  border: 1px solid gray;
   &>img {
     height: 100%;
-    width: 100%;
     object-fit: contain;
   }
 `;
@@ -221,7 +222,7 @@ export const Title = styled.p`
   line-height: 24px;
   font-size: 24px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
@@ -232,7 +233,7 @@ export const Description = styled.p`
   line-height: 18px;
   font-size: 18px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   text-align: center;
   margin-bottom: 10px;
 `;
@@ -256,7 +257,8 @@ export const CommentField = styled.textarea`
   line-height: 16px;
   font-size: 16px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
+  background-color: #D1D2D3;
   border: 1px solid ${BUTTON_COLOR};
   border-radius: 6px;
   resize: none;
@@ -314,7 +316,8 @@ export const CommentList = styled.ul`
 export const CommentListBlock = styled.div`
   width: 100%;
   padding: 5px;
-  border: 1px solid gray;
+  border: 1px solid ${TEXT_COLOR};
+  background-color: #EFEFEF;
   margin-bottom: 3px;
 `;
 
@@ -323,7 +326,7 @@ export const CommentListRate = styled.p`
   line-height: 12px;
   font-size: 12px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   text-align: left;
   margin-bottom: 3px;
   &>span {
@@ -336,7 +339,7 @@ export const CommentListText = styled.p`
   line-height: 14px;
   font-size: 14px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   text-align: left;
   margin-bottom: 3px;
   overflow: hidden;
@@ -348,7 +351,7 @@ export const CommentListAuthor = styled.p`
   line-height: 12px;
   font-size: 12px;
   font-family: "Roboto";
-  color: gray;
+  color: ${TEXT_COLOR};
   text-align: right;
   &>span {
     font-weight: 700;
